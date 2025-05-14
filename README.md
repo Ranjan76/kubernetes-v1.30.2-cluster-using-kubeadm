@@ -522,9 +522,6 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 
 ---
 
-Here's a revised version of Step 11 with a more streamlined format:
-
----
 
 ### Step 11: Join Worker Nodes to the Cluster**
 
