@@ -523,22 +523,27 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 
 ---
 
-### **Step 11: Join Worker Nodes to the Cluster**
-
-After initializing the Kubernetes master node, you will need to run the `kubeadm join` command on each worker node to add them to the cluster.
+Here's a revised version of Step 11 with a more streamlined format:
 
 ---
 
-#### **1. Run the Command on Each Worker Node**
+**Step 11: Join Worker Nodes to the Cluster**
 
-You will receive a command to join the worker nodes to the cluster after initializing the master node. The command will look something like this:
+After initializing the Kubernetes master node, you will need to run the `kubeadm join` command on each worker node to add them to the cluster.
 
-```bash
-kubeadm join 192.168.122.100:6443 --token zcijug.ye3vrct74itrkesp \
+1. **Run the Command on Each Worker Node**
+   You will receive a command after initializing the master node to join the worker nodes to the cluster. The command will look like this:
+
+   ```bash
+   kubeadm join 192.168.122.100:6443 --token zcijug.ye3vrct74itrkesp \
         --discovery-token-ca-cert-hash sha256:e9dd1a0638a5a1aa1850c16f4c9eeaa2e58d03f97fd0403f587c69502570c9cd
-```
+   ```
 
-* **Note:** The actual `kubeadm join` command for your worker nodes will contain a unique token and certificate hash generated during the master node initialization. Ensure that you use the command exactly as shown when it is generated.
+   **Note:**
+
+   * The `kubeadm join` command will contain a unique token and certificate hash generated during the master node initialization.
+   * Ensure you use the command exactly as shown when it is generated to avoid errors.
+   * If you encounter any syntax errors or issues, please ensure the command is copied exactly and that the token and certificate hash are valid.
 
 ---
 
