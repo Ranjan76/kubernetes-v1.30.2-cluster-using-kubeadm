@@ -526,7 +526,7 @@ Here's a revised version of Step 11 with a more streamlined format:
 
 ---
 
-**Step 11: Join Worker Nodes to the Cluster**
+### Step 11: Join Worker Nodes to the Cluster**
 
 After initializing the Kubernetes master node, you will need to run the `kubeadm join` command on each worker node to add them to the cluster.
 
