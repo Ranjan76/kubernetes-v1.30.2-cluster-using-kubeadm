@@ -181,7 +181,7 @@ sudo sysctl -p /etc/sysctl.conf
 
 ---
 
-Here's the updated **Step 7: Modify containerd Configuration for systemd Support** using `vim` that you can copy easily:
+### Step 7: Modify containerd Configuration for systemd Support
 
 ```bash
 # Edit the containerd configuration file using vim
@@ -409,7 +409,6 @@ version = 2
   gid = 0
   uid = 0
 ```
-Perfect! Here's **Step 8** written in clean Markdown format, following your style:
 
 ---
 
