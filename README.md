@@ -554,7 +554,7 @@ Here's the updated **Step 12** with an additional section explaining **how to ru
 
 ---
 
-🔍 **Step 12: Install Kubeaudit for Kubernetes Security Auditing**
+### Step 12: Install Kubeaudit for Kubernetes Security Auditing**
 
 Kubeaudit helps audit your Kubernetes clusters against common security issues.
 
