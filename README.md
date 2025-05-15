@@ -550,6 +550,91 @@ After running the command on the worker node(s), go to the master node and run t
 ```bash
 kubectl get nodes
 ```
+Here's the updated **Step 12** with an additional section explaining **how to run Kubeaudit**:
+
+---
+
+🔍 **Step 12: Install Kubeaudit for Kubernetes Security Auditing**
+
+Kubeaudit helps audit your Kubernetes clusters against common security issues.
+
+---
+
+### 1. **Download Kubeaudit Binary**
+
+```bash
+wget https://github.com/Shopify/kubeaudit/releases/download/v0.22.2/kubeaudit_0.22.2_linux_amd64.tar.gz
+```
+
+---
+
+### 2. **Extract the Downloaded File**
+
+```bash
+tar -xvzf kubeaudit_0.22.2_linux_amd64.tar.gz
+```
+
+---
+
+### 3. **Move the Binary to `/usr/local/bin`**
+
+```bash
+sudo mv kubeaudit /usr/local/bin/
+```
+
+> ⚠️ **Troubleshooting**:
+>
+> * If you see: `mv: cannot stat 'kubeaudit': No such file or directory`
+> * Try: `ls` after extraction to find the correct binary name
+> * Example fix (if binary name is different):
+>
+>   ```bash
+>   sudo mv kubeaudit_0.22.2_linux_amd64 /usr/local/bin/kubeaudit
+>   chmod +x /usr/local/bin/kubeaudit
+>   ```
+
+---
+
+### 4. **Verify Installation**
+
+```bash
+kubeaudit version
+```
+
+---
+
+### ✅ **How to Use Kubeaudit**
+
+Run kubeaudit to audit all workloads in the cluster for security issues:
+
+```bash
+kubeaudit all
+```
+
+You can also audit specific issues, for example:
+
+* **Audit containers running as root:**
+
+  ```bash
+  kubeaudit asroot
+  ```
+
+* **Audit missing security context:**
+
+  ```bash
+  kubeaudit missing-security-context
+  ```
+
+* **See full list of commands:**
+
+  ```bash
+  kubeaudit help
+  ```
+
+---
+
+Let me know if you'd like to include example output or add this to a full `README.md`.
+
 
 You should see the worker node(s) listed as **Ready**.
 
